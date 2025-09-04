@@ -1,0 +1,218 @@
+/*
+ * File: resources/css/ifairy-auth.css
+ * Description: Styles for the iFairy login and registration pages.
+ */
+
+/* --- Global Settings & Background --- */
+body {
+    font-family: 'Nunito', sans-serif; /* Our new font */
+    background-color: #e0f7fa; /* Light, magical blue */
+    background-image: url('/img/auth-background.jpg'); /* Path to background image */
+    background-size: cover;
+    background-position: center;
+    color: #333; /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- Form Container --- */
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px 50px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    border-top: 6px solid #673ab7; /* Purple accent bar at the top */
+}
+
+/* --- Header & Logo --- */
+.auth-header {
+    margin-bottom: 2rem; /* Spacing below the header */
+}
+
+.auth-header img.auth-logo {
+    max-width: 120px; /* Logo size */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.auth-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.25rem; /* 36px */
+    font-weight: 800;
+    color: #4a148c; /* Dark purple */
+    margin-bottom: 1.5rem; /* 24px */
+}
+
+/* --- Form Fields & Labels --- */
+.form-group {
+    margin-bottom: 1.5rem; /* Margin below each field group */
+    text-align: left; /* Align text to the left */
+}
+
+.form-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #6a1b9a; /* Purple for labels */
+    margin-bottom: 8px;
+    display: block; /* So the label is above the input */
+    text-align: left; /* Align labels to the left */
+}
+
+.form-input,
+.form-select { /* Added .form-select for consistency */
+    border-radius: 8px;
+    border: 2px solid #bdbdbd;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%; /* Inputs take up full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.form-input:focus,
+.form-select:focus {
+    border-color: #673ab7; /* Purple on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.2);
+}
+
+/* --- Checkbox Styling --- */
+.checkbox-group {
+    margin-top: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+    cursor: pointer;
+}
+
+.checkbox-input {
+    margin-right: 8px;
+    accent-color: #673ab7; /* Color for the checkbox tick */
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: #673ab7; /* Purple */
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    border-radius: 25px; /* Rounded buttons */
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%; /* Button takes up full width */
+    margin-top: 20px;
+    border: none; /* Remove default border */
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #512da8; /* Darker purple */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #673ab7;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    border: 2px solid #673ab7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 15px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(103, 58, 183, 0.1); /* Lighter purple fill */
+}
+
+/* --- Links & Footer --- */
+.link-custom {
+    color: #673ab7;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.link-custom:hover {
+    color: #512da8;
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #333;
+    text-align: center;
+}
+
+.auth-footer a {
+    color: #673ab7;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Status & Error Messages --- */
+.error-message {
+    color: #d32f2f; /* Red for errors */
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+.auth-status-success {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #2e7d32;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* --- Utility Classes --- */
+.hidden {
+    display: none;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 500px) {
+    .auth-container {
+        padding: 30px 25px; /* Reduce padding on small screens */
+        margin: 20px;
+    }
+
+    .auth-title {
+        font-size: 1.8rem; /* Smaller title */
+    }
+
+    .form-label {
+        font-size: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}

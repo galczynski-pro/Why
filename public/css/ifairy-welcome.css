@@ -1,0 +1,205 @@
+/* Plik: resources/css/ifairy-welcome.css */
+
+/* --- Globalne style --- */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f0f9ff; /* Bardzo jasny niebieski */
+    color: #333;
+    line-height: 1.6; /* Lepsza czytelność tekstu */
+}
+
+/* --- Nagłówek --- */
+header {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(to bottom, #81c7f5, #42a5f5); /* Gradient od jasnego do średniego błękitu */
+    color: white;
+    padding: 2rem 0; /* Zwiększony padding dla przestrzeni */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 800;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Dodanie cienia tekstu */
+}
+
+/* Nawigacja */
+nav {
+    display: flex;
+    gap: 2rem; /* Odstępy między linkami */
+}
+
+nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white; /* Biały kolor linków */
+    text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+    color: #e0e0e0;
+    text-decoration: underline; /* Podkreślenie po najechaniu */
+}
+
+/* --- Sekcje (główne) --- */
+main {
+    max-width: 1200px; /* Szerokość głównej treści */
+    margin: 0 auto;
+    padding: 3rem 2rem; /* Większy padding wokół sekcji */
+}
+
+section {
+    margin-bottom: 4rem; /* Odstęp między sekcjami */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Delikatne tło dla sekcji */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Lekki cień dla sekcji */
+}
+
+section h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem; /* 48px */
+    font-weight: 800;
+    color: #0d47a1; /* Ciemny niebieski */
+    margin-bottom: 1.5rem;
+    text-align: center; /* Wyśrodkowanie nagłówka */
+}
+
+section h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #1565c0; /* Nieco jaśniejszy odcień */
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #555; /* Ciemniejszy tekst dla lepszego kontrastu */
+}
+
+/* --- Przyciski (Welcome) --- */
+.btn-primary-welcome {
+    background-color: #9c27b0; /* Głęboki fiolet */
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    border-radius: 30px;
+    padding: 16px 40px;
+    font-size: 1.3rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(156, 39, 176, 0.3);
+    text-decoration: none; /* Usunięcie podkreślenia */
+    display: inline-block; /* Umożliwienie ustawienia paddingu */
+    cursor: pointer;
+}
+
+.btn-primary-welcome:hover {
+    background-color: #7b1fa2;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(156, 39, 176, 0.4);
+}
+
+.btn-secondary-welcome {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    border-radius: 30px;
+    padding: 14px 38px;
+    font-size: 1.2rem;
+    border: 3px solid #673ab7; /* Fioletowy border */
+    color: #673ab7;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Usunięcie podkreślenia */
+    display: inline-block; /* Umożliwienie ustawienia paddingu */
+    cursor: pointer;
+}
+
+.btn-secondary-welcome:hover {
+    background-color: #673ab7;
+    color: white;
+    transform: translateY(-2px); /* Delikatne przesunięcie */
+    box-shadow: 0 3px 8px rgba(103, 58, 183, 0.2);
+}
+
+/* --- Stopka --- */
+footer {
+    background-color: #1a202c; /* Ciemny szary */
+    color: #a0aec0; /* Jasnoszary */
+    padding: 2rem;
+    text-align: center; /* Wycentrowanie treści stopki */
+    font-size: 0.9rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #a0aec0; /* Jasnoszary */
+    text-decoration: none; /* Usunięcie podkreślenia */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- Responsywność (Media Queries) --- */
+@media (max-width: 768px) {
+    /* Dostosowanie nagłówka */
+    header .container {
+        flex-direction: column; /* Ułożenie elementów w kolumnie */
+        align-items: center; /* Wycentrowanie */
+    }
+    header h1 {
+        font-size: 2rem; /* Zmniejszenie tytułu */
+        margin-bottom: 1rem;
+    }
+    nav {
+        flex-direction: column; /* Linki nawigacyjne w kolumnie */
+        align-items: center;
+    }
+    nav a {
+        margin: 0.5rem 0; /* Odstępy między linkami */
+    }
+
+    /* Dostosowanie sekcji */
+    section {
+        padding: 1.5rem;
+    }
+    section h2 {
+        font-size: 2.2rem;
+    }
+    section h3 {
+        font-size: 1.8rem;
+    }
+    section p {
+        font-size: 1rem;
+    }
+
+    /* Dostosowanie przycisków */
+    .btn-primary-welcome,
+    .btn-secondary-welcome {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
